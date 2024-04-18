@@ -71,3 +71,38 @@ print('hi ' + name + '. You are ' + str(age) +  ' years old')
 print('hi {}. You are {} years old'.format('Johnny', '55'))
 
 print(f'hi {name}. You are {age} years old')
+
+selfish = '01234567'
+#string slicing [start:stop:stepover]
+print(selfish[0:2])
+print(selfish[0:8:2])
+print(selfish[1:])
+print(selfish[:5])
+print(selfish[::2])
+print(selfish[-3])
+print(selfish[::-1])
+
+#Immutable strings selfish[0] = '8' doesn't work but selfish = selfish + 8 would add 8
+
+greet = 'heloooo'
+print(len(greet))
+print(greet[0: len(greet)])
+
+quote = 'to be or not to be'
+print(quote.upper())
+print(quote.capitalize())
+print(quote.lower())
+print(quote.find('be'))
+print(quote.replace('be', 'me'))
+
+print(bool(1))
+print(bool(0))
+
+birth_year = input('What year were you born?')
+age = 2019 - int(birth_year)
+print(f'Your age is: {age}')
+
+user_name = input('What is your username?')
+password = input(f'What is {user_name}\'s password?')
+hidden_password = len(password) * '*'
+print(f'{user_name}\'s password {hidden_password} is {len(password)} long')
