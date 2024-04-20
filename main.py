@@ -106,3 +106,136 @@ user_name = input('What is your username?')
 password = input(f'What is {user_name}\'s password?')
 hidden_password = len(password) * '*'
 print(f'{user_name}\'s password {hidden_password} is {len(password)} long')
+
+li = [1,2,3,4,5,6,7,8,9,10]
+li2 = ['a','b','c']
+li3 = [1,2,'a',True]
+
+#List slicing
+amazon_cart = [
+  'notebooks',
+  'sunglasses',
+  'toys',
+  'grapes'
+]
+amazon_cart[0] = 'laptop'
+new_cart = amazon_cart[:]
+new_cart[0] = 'gum'
+print(new_cart)
+print(amazon_cart)
+
+# Matrix
+matrix = [
+  [1,2,3],
+  [2,4,6],
+  [7,8,9]
+]
+print(matrix[0][1])
+
+basket = [1,2,3,4,5]
+
+#adding
+basket.append(100)
+basket.insert(6,200)
+basket.extend([300,400])
+new_list = basket[:]
+print('Adding: ',basket)
+print('Adding: ',new_list)
+
+#removing
+basket.pop()
+basket.pop(0) # we give index we want to remove with pop
+basket.remove(4) # we give exact value of element we want to remove with remove
+
+print('Removing: ',basket)
+
+basket.clear()
+print('Cleared: ',basket)
+
+basket2 = ['a','x','b','c','d','e','d']
+basket3 = sorted(basket2)
+basket2.sort()
+basket2.reverse()
+print(basket2.index('d',0,5))
+print('x' in basket2)
+print('i' in 'hi my name is Ian')
+print(basket2.count('d'))
+print(basket2[::-1])
+print(basket2)
+print(basket3)
+print(list(range(1,101)))
+
+new_sentence = ' '.join(['hi','my','name','is','JOJO'])
+print(new_sentence)
+
+#List Unpacking
+a,b,c, *other, d = [1,2,3,4,5,6,7,8,9] #can be applie to tuples as well
+print(a)
+print(b)
+print(c)
+print(other)
+print(d)
+
+sen = 'Hi I am youssef'
+split = sen.split(' ')
+join = ' '.join(split)
+print(split)
+print(join)
+
+weapons = None
+print(weapons)
+
+dictionary = {
+  'a': [1,2,3],
+  123: 'hello',
+  True: True
+}
+
+my_list = [
+  {
+    'a': [1,2,3],
+    'b': 'hello',
+    'x': True
+  },
+  {
+    'a': [1,2,3],
+    'b': 'hello',
+    'x': True
+  },
+  {
+    'a': [1,2,3],
+    'b': 'hello',
+    'x': True
+  }
+]
+dictionary['my_name'] = 'ustes'
+print(dictionary['a'][1])
+print(dictionary[123])
+print(dictionary[True])
+print(dictionary)
+
+user = {
+  'basket': [1,2,3],
+  'greet': 'HeLLo',
+  'age': 30
+}
+print(user.get('age',55))
+user2 = dict(JohnJohn='JohnJohn')
+print(user2)
+print('basket' in user)
+print(user.items())
+
+my_tuple = (1, 2, 3, 4, 5,5)
+print (5 in my_tuple)
+tupl_obj = {
+  (1,2): [1,2,3],
+  'greet': 'hello',
+  'age': 27
+}
+print(tupl_obj[(1,2)])
+
+new_tuple = my_tuple[1:2]
+
+print(new_tuple)
+print(my_tuple.count(5))
+print(my_tuple.index(5))
