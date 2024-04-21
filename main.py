@@ -239,3 +239,21 @@ new_tuple = my_tuple[1:2]
 print(new_tuple)
 print(my_tuple.count(5))
 print(my_tuple.index(5))
+
+my_set = {1,2,3,4,5,5}
+my_set.add(100)
+my_set.add(2)
+
+my_list = [1,2,3,4,5,5]
+print(set(my_list))
+print(1 in my_set)
+print(my_set)
+
+#.difference()
+#.discard()
+#.difference_update()
+#.intersection()
+#.isdisjoint()
+#.issubset()
+#.issuperset()
+#.union()
