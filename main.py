@@ -259,6 +259,16 @@ print(my_set)
 #.union()
 
 
+picture = [[0, 0, 0, 1, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0], [0, 1, 1, 1, 1, 1, 0],
+           [1, 1, 1, 1, 1, 1, 1], [0, 0, 0, 1, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0]]
+
+photo = '\n'
+for arr1 in picture:
+  for num in arr1:
+    if (not (num)):
+      photo += ' '
+=======
+
 some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
 
 duplicates = []
@@ -394,10 +404,103 @@ for arr1 in picture:
   for num in arr1:
     if (not(num)):
       photo +=' '
+
     elif (num):
       photo += '*'
 
   photo += '\n'
 
-print(photo)
 
+
+def say_hello(name, emoji):
+  print(f'hellooooo {name} {emoji}')
+
+
+print(say_hello)
+say_hello('Youssef', photo)
+
+def checkDriverAge(age=0):
+  age = age
+
+  if int(age) < 18:
+    print("Sorry, you are too young to drive this car. Powering off")
+  elif int(age) > 18:
+    print("Powering On. Enjoy the ride!")
+  elif int(age) == 18:
+    print("Congratulations on your first year of driving. Enjoy the ride!")
+
+#1. Wrap the above code in a function called checkDriverAge(). Whenever you call this function, you will get prompted for age.
+# Notice the benefit in having checkDriverAge() instead of copying and pasting the function everytime?
+
+#2 Instead of using the input(). Now, make the checkDriverAge() function accept an argument of age, so that if you enter:
+#checkDriverAge(92);
+#it returns "Powering On. Enjoy the ride!"
+#also make it so that the default age is set to 0 if no argument is given.
+
+checkDriverAge(21)
+
+# Docstrings
+
+def test(a):
+    '''
+    Info: this function tests and prints param a.
+    '''
+    print(a)
+
+test('a')
+
+# *args **kwargs
+
+def super_func(*args, **kwargs):
+  total = 0
+  for items in kwargs.values():
+    total += items
+  return sum(args) + total
+
+print(super_func(1,2,3,4,5, num1=5, num2=10))
+
+# Rule: params, *args, default parameters, **kwargs
+
+def highest_even(li):
+  even_nums = []
+  for num in li:
+    if (num % 2 == 0):
+      even_nums.append(num)
+
+  even_nums.sort()
+  return even_nums[len(even_nums) - 1]
+
+print(highest_even([10,2,3,4,8,11]))
+
+a = 'helloooooooooo'
+
+if ((n := len(a)) > 10):
+  print(f"too long {n} elements")
+
+while ((n := len(a)) > 1):
+  print(n)
+  a = a[:-1]
+
+print(a)
+
+a = 1
+
+def confusion():
+  a = 5
+  return a
+
+print(confusion())
+print(a)
+
+total = 0
+
+def count(total):
+  total += 1
+  return total
+
+# count()
+# count()
+# print(count())
+print(count(count(count(total))))
+
+print(photo)
