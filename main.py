@@ -258,6 +258,24 @@ print(my_set)
 #.issuperset()
 #.union()
 
+
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+
+duplicates = []
+for idx, el in enumerate(some_list):
+  for idx2, el2 in enumerate(some_list):
+    if ((idx != idx2) and (el == el2) and (el not in duplicates)):
+      duplicates.append(el)
+
+duplicates2 = []
+
+for value in some_list:
+  if ((some_list.count(value) > 1) and (value not in duplicates2)):
+    duplicates2.append(value)
+
+print(f'duplicates: {duplicates}')
+print(f'duplicates2: {duplicates2}')
+=======
 is_old = True
 is_licenced = False
 
@@ -382,3 +400,4 @@ for arr1 in picture:
   photo += '\n'
 
 print(photo)
+
