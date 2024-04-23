@@ -1,14 +1,12 @@
 llama-2-70b is the most powerful open weights model released by Meta to date.
-llama-2-70b is only 2 files, a parameters file and run.c file written in C.
+
 This is a 70 billion parameter model.
 It would only require about 500 lines of C with no other dependencies to implement the neural network architecture.
 No connection to the internet required once both files are created.
 How llama is trained:
 
 -10TB of text is retrieved from the internet.
--Procure 6,000 GPU clusters. These are very specialized computers intended for very computational workloads like training of neural networks.
--To obtain the parameters in a ZIP file(the model training).
--Neural Network predicts the next word in a sequence.
+
 Chapters:
 Part 1: LLMs
 00:00:00 Intro: Large Language Model (LLM) talk

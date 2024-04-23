@@ -258,6 +258,7 @@ print(my_set)
 #.issuperset()
 #.union()
 
+
 picture = [[0, 0, 0, 1, 0, 0, 0], [0, 0, 1, 1, 1, 0, 0], [0, 1, 1, 1, 1, 1, 0],
            [1, 1, 1, 1, 1, 1, 1], [0, 0, 0, 1, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0]]
 
@@ -266,10 +267,149 @@ for arr1 in picture:
   for num in arr1:
     if (not (num)):
       photo += ' '
+=======
+
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+
+duplicates = []
+for idx, el in enumerate(some_list):
+  for idx2, el2 in enumerate(some_list):
+    if ((idx != idx2) and (el == el2) and (el not in duplicates)):
+      duplicates.append(el)
+
+duplicates2 = []
+
+for value in some_list:
+  if ((some_list.count(value) > 1) and (value not in duplicates2)):
+    duplicates2.append(value)
+
+print(f'duplicates: {duplicates}')
+print(f'duplicates2: {duplicates2}')
+=======
+is_old = True
+is_licenced = False
+
+if is_old and is_licenced: print('you are old enough to drive!')
+elif is_old or is_licenced:
+  print('you can drive now!')
+else:
+  print('you are not of age!')
+
+# if is_old & is_licenced: print('you are old enough to drive!')
+# elif is_old | is_licenced:
+#   print('you can drive now!')
+# else:
+#   print('you are not of age!')
+
+# Ternary Operator
+is_friend = True
+can_message = "message allowed" if is_friend else "not allowed to message"
+print(can_message)
+
+is_magician = False
+is_expert = True
+
+if is_magician and is_expert:
+  print('you are a master is_magician')
+elif is_magician and not is_expert:
+  print('at least you are getting there')
+elif not(is_magician):
+  print('you need magic powers')
+
+print(True == 1)
+print('' == 1)
+print([] == 1)
+print(10 == 10.0)
+print([] == [])
+
+print(True is 1)
+print('' is 1)
+print([] is 1)
+print(10 is 10.0)
+print([] is [])
+
+for item in [1,2,3,4,5]:
+  for lttr in 'Zero to Mastery':
+    print(item,lttr)
+
+#iterable - list, dictionary, tuple, set, string
+
+user = {
+  'name': 'Golem',
+  'age': 5006,
+  'can_swim': False
+}
+for key,value in user.items():
+  print(key,value)
+
+for item in user.items():
+  key, value = item
+  print(item)
+  print(key,value)
+
+for item in user.values():
+  print(item)
+
+for item in user.keys():
+  print(item)
+
+for item in user:
+  print(item,user[item])
+
+my_list = [1, 2, 3, 4, 5,6,7,8,9,10]
+counter = 0
+
+for num in my_list:
+  if isinstance(num, (int, float, complex)):
+    counter += num
+print(counter)
+
+for el in range(0,10,2):
+  print(el)
+for _ in range(2):
+  print(list(range(10)))
+
+for i,char in enumerate((1,2,3)):
+  print(i,char)
+
+for i,char in enumerate(list(range(100))):
+  if (char == 50):
+    print(f'The index of 50 is: {i}')
+
+i = 0
+while i < 50:
+  print(i)
+  i += 1
+else:
+  print('done with all the work')
+
+while True:
+  response = input('say something: ')
+  if (response == 'bye'):
+    break
+    # continue
+    # pass
+
+picture = [
+  [0,0,0,1,0,0,0],
+  [0,0,1,1,1,0,0],
+  [0,1,1,1,1,1,0],
+  [1,1,1,1,1,1,1],
+  [0,0,0,1,0,0,0],
+  [0,0,0,1,0,0,0]
+]
+
+photo = ''
+for arr1 in picture:
+  for num in arr1:
+    if (not(num)):
+      photo +=' '
+
     elif (num):
       photo += '*'
 
   photo += '\n'
+
 
 
 def say_hello(name, emoji):
@@ -362,3 +502,5 @@ def count(total):
 # count()
 # print(count())
 print(count(count(count(total))))
+
+print(photo)
