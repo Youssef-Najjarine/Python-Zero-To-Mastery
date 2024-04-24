@@ -1,27 +1,44 @@
 llama-2-70b is the most powerful open weights model released by Meta to date.
-
+llama-2-70b is only 2 files, a parameters file and run.c file written in C.
 This is a 70 billion parameter model.
 It would only require about 500 lines of C with no other dependencies to implement the neural network architecture.
 No connection to the internet required once both files are created.
 How llama is trained:
 
 -10TB of text is retrieved from the internet.
+-Procure 6,000 GPU clusters. These are very specialized computers intended for very computational workloads like training of neural networks.
+-To obtain the parameters in a ZIP file(the model training).
+-Neural Network predicts the next word in a sequence.
 
-Chapters:
-Part 1: LLMs
-00:00:00 Intro: Large Language Model (LLM) talk
-00:00:20 LLM Inference
-00:04:17 LLM Training
-00:08:58 LLM dreams
-00:11:22 How do they work?
-00:14:14 Finetuning into an Assistant
-00:17:52 Summary so far
-00:21:05 Appendix: Comparisons, Labeling docs, RLHF, Synthetic data, Leaderboard
-Part 2: Future of LLMs
-00:25:43 LLM Scaling Laws
-00:27:43 Tool Use (Browser, Calculator, Interpreter, DALL-E)
-00:33:32 Multimodality (Vision, Audio)
-00:35:00 Thinking, System 1/2
-00:38:02 Self-improvement, LLM AlphaGo
-00:40:45 LLM Customization, GPTs store
-00:42:15 LLM OS
+AI knowledge is 1 dimensional. You need ask AI questions in a certain way so it outputs the correct answer.
+Pre-training stage trains on a ton of internet and it's about knowledge.
+Fine Tuning stage is about alignment. It's about changing the formatting from internet documents to question and answer documents in kind of like a helpful assistant manner.
+The way to fix Mis-behaviors and incorrect answers is to either ask the user to enter in the correct answer or save the error to come back to it and solve it.
+Stage 2 of fine-tuning is reinforcement learning from human feedback.
+Closed AI models work a lot better, but you can't work with them, download them, fine tune them, etc.. They re only available through a web interface.
+Multimodality is being utilized a lot in Ai and it combines any of the Five Modes of communication (Visual, Aural, Linguistic, Gestural, Spatial) in one medium.
+ChatGPt knows when to either write it's own code in many different languages to create a website, it knows when to utilize when to access a calculator to solve mathematical problems, and it can generate photos of anything to users.
+You can show chatGPT a sketch of a website and it can create it for you with logic applied to it.
+You can speak to chatGPT and have normal conversations and dialogue with it.
+LLMs currently only have a System 1.
+System 1 is piecing together words from cache or previously retrieved text from the internet.
+System 2 is what we hope to achieve with AI. Which is critical thinking with the ability to make complex decisions on it's own.
+Self Improvement in regards to playing a game is step 1:
+  -Learn by imitation of the greatest players of that game.
+Step 2:
+  -Play millions and millions of games till it perfects the game and has seen every possible outcome.
+
+What is the step 2 equivalent in the domain of open language modeling?
+There's no easy to evaluate fast criterion or reward function discovered yet.
+
+Hopefully an LLM in a few years can:
+  -It can read and generate text
+  -It has more knowledge than any single human about all subjects
+  -It can browse the internet
+  -It can use the existing software infrastructure (calculator, Python, mouse/keyboard)
+  -It can see and generate images and videos
+  -It can hear and speak, and generate music
+  -It can think for a long time using System 2
+  -It can "self-improve" in domains that offer a reward function
+  -It can be customized and finetuned for specific tasks, many versions exist in app stores
+  -It can communicate with other LLMs
