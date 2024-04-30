@@ -5,6 +5,7 @@ from functools import reduce
 # def multiply_by2(item):
 #   return item*2
 
+
 # print(list(map(multiply_by2, my_list)))
 
 # def only_odd(item):
@@ -46,3 +47,16 @@ a = [(0,2), (4,3), (9,9), (10,-1)]
 print(f'Sorted by Second index: {sorted(list(map(lambda tpl: tuple(sorted(tpl)),a)))}')
 
 print(f'Sorted by Second index 2nd version: {a.sort(key=lambda x: x[1])}')
+
+class SuperList(list):
+  def __len__(self):
+    return 1000
+
+
+super_list1 = SuperList()
+super_list1.append('apples')
+print('super_list1: ', super_list1)
+print(super_list1[0])
+print(len(super_list1))
+
+
