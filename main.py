@@ -1,4 +1,18 @@
 
+def my_decorator(func):
+  def wrap_func(*args, **kwargs):
+    print('**********')
+    func(*args, **kwargs)
+    print('**********')
+  return wrap_func
+
+@my_decorator
+def hello(greeting, emoji=':('):
+  print(greeting, emoji)
+
+hello('hiiii')
+
+
 my_list = [char for char in 'hello']
 my_list2 = [num for num in range(0,100)]
 my_list3 = [num**2 for num in range(0,100)]
@@ -83,3 +97,4 @@ super_list1.append('apples')
 print('super_list1: ', super_list1)
 print(super_list1[0])
 print(len(super_list1))
+
