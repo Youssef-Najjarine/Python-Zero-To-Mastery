@@ -1,3 +1,6 @@
+def gen_fun(num):
+  for i in range(num):
+    yield i
 
 # Create an @authenticated decorator that only allows the function to run is user1 has 'valid' set to True:
 user1 = {
@@ -123,5 +126,6 @@ super_list1.append('apples')
 print('super_list1: ', super_list1)
 print(super_list1[0])
 print(len(super_list1))
+
 
 
